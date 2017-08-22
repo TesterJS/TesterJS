@@ -4,7 +4,7 @@ TesterJS is a simple library which let you compare in terms of performance one o
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -36,4 +36,4 @@ TesterJS 0.1.0
 
 ## License
 
-This project is licensed under the ISC License
+This project is licensed under the ISC License - see the LICENSE.md file for details
