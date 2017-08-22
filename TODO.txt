@@ -1,0 +1,15 @@
+TODO LIST:
+
+* Add README
+* Create as node module
+* Add Unit Tests
+* Add Coverage
+* Prepare to recieve and array of tests
+    - Pass array of objects with the following structure:
+        - A function test${Name} the coded is going to be tested
+        - An array of params
+* Write in ES6
+* Nice to have:
+    - TDD
+    - Add perfomance test to DOM manipulation
+
