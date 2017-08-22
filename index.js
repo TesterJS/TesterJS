@@ -92,12 +92,12 @@ var paramsC = [5,6,7,8,9,10];
 *  We create the speedTest using it's constructor for the 
 *  implementation that we want to test
 */
-var speedTestA = new SpeedTest(testA, paramsA, 5);
-var speedTestB = new SpeedTest(testB, paramsB, 5);
-var speedTestC = new SpeedTest(testC, paramsC, 5);
-var speedTestD = new SpeedTest(testD, paramsC, 5);
-var speedTestE = new SpeedTest(testE, paramsC, 5);
-var speedTestF = new SpeedTest(testF, paramsC, 5);
+var speedTestA = new SpeedTest(testA);
+var speedTestB = new SpeedTest(testB);
+var speedTestC = new SpeedTest(testC);
+var speedTestD = new SpeedTest(testD);
+var speedTestE = new SpeedTest(testE);
+var speedTestF = new SpeedTest(testF);
 
 
 speedTestA.executor();
