@@ -32,7 +32,7 @@ TesterJS 0.1.0
 
 ## Authors
 
-**Juan Manuel Ruiz and Juan Sicilia**
+**Juan Manuel Ruiz & Juan Sicilia**
 
 ## License
 
