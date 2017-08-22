@@ -3,6 +3,9 @@ TODO LIST:
 * Add README
 * Create as node module
 * Add Unit Tests
+    - Function return what is expected and sets correctly its specific configuration
+    - Function return what is expected and sets the default configuration
+    - Check that a test iterates N number of times as its configuration defines
 * Add Coverage
 * Prepare to recieve and array of tests
     - Pass array of objects with the following structure:

@@ -1,14 +1,15 @@
 'use strict';
+const defaultConfig = require('./config/Config');
 /*
 *  The SpeedTest constructor 
 *  test: function that holds the implemented code to test
 *  params: needed params for the test function
 */
-function SpeedTest(test, params, num) {
+function SpeedTest(test, config) {
+   const testConfig = config || defaultConfig;
    this.test = test;
-   this.params = params;
-   this.numOfTimes = num || 10000;
-   this.average = 0;
+   this.params = testConfig.params;
+   this.numOfTimes = testConfig.numOfTimes;
 }
 
 /*
