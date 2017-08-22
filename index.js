@@ -1,30 +1,5 @@
-/*
-*  The SpeedTest constructor 
-*  test: function that holds the implemented code to test
-*  params: needed params for the test function
-*/
-function SpeedTest(test, params, num) {
-   this.test = test;
-   this.params = params;
-   this.numOfTimes = num || 10000;
-   this.average = 0;
-}
-
-/*
-*  The SpeedTest constructorprototype that holds the 
-*  SpeedTest executor
-*/
-SpeedTest.prototype = {
-  executor: function() {
-    var dateInit, dateEnd, totalTime = 0,
-       i = this.numOfTimes;
-    console.time('Total time ' + this.test.name);
-    while(i--) {
-      this.test(this.params);
-    }
-    console.timeEnd('Total time ' + this.test.name);
- }
-}
+'use strict';
+const SpeedTest = require('./app/tester');
 
 /*
 *  The code a to test
@@ -117,12 +92,12 @@ var paramsC = [5,6,7,8,9,10];
 *  We create the speedTest using it's constructor for the 
 *  implementation that we want to test
 */
-var speedTestA = new SpeedTest(testA, paramsA, 500000);
-var speedTestB = new SpeedTest(testB, paramsB, 500000);
-var speedTestC = new SpeedTest(testC, paramsC, 500000);
-var speedTestD = new SpeedTest(testD, paramsC, 500000);
-var speedTestE = new SpeedTest(testE, paramsC, 500000);
-var speedTestF = new SpeedTest(testF, paramsC, 500000);
+var speedTestA = new SpeedTest(testA, paramsA, 5);
+var speedTestB = new SpeedTest(testB, paramsB, 5);
+var speedTestC = new SpeedTest(testC, paramsC, 5);
+var speedTestD = new SpeedTest(testD, paramsC, 5);
+var speedTestE = new SpeedTest(testE, paramsC, 5);
+var speedTestF = new SpeedTest(testF, paramsC, 5);
 
 
 speedTestA.executor();

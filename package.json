@@ -1,0 +1,29 @@
+{
+  "name": "javascript-performance-tester",
+  "version": "0.1.0",
+  "description": "JavaScript Perfomance Tester tool",
+  "main": "index.js",
+  "engines": {
+    "node": "6.11.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siciliajuan/Tester.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "tester",
+    "performance"
+  ],
+  "author": "Juan Sicilia, JuanMa Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siciliajuan/Tester/issues"
+  },
+  "homepage": "https://github.com/siciliajuan/Tester#readme"
+}
