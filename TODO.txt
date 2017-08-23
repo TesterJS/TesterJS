@@ -1,7 +1,10 @@
 TODO LIST:
 
 * Add README
-* Create as node module
+* Add project configuration:
+    - editorconfig (√)
+    - CI
+* Create as node module (√)
 * Add Unit Tests
     - Function return what is expected and sets correctly its specific configuration
     - Function return what is expected and sets the default configuration
