@@ -1,10 +1,6 @@
 'use strict';
 const defaultConfig = require('./config/Config');
-/*
-*  @description The SpeedTest constructor 
-*  test: function that holds the implemented code to test
-*  params: needed params for the test function
-*/
+
 /**
  * @description The SpeedTest constructor
  * @param {Function} - Test to launch
