@@ -20,7 +20,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha"
+    "test": "mocha",
+    "coverageReport": "nyc --reporter=lcov mocha",
+    "testCov": "nyc mocha" 
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "chai": "4.1.1",
     "istanbul": "0.4.5",
-    "mocha": "3.5.0"
+    "mocha": "3.5.0",
+    "nyc": "11.1.0"
   }
 }
