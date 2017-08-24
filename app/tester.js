@@ -1,10 +1,12 @@
 'use strict';
 const defaultConfig = require('./config/Config');
-/*
-*  The SpeedTest constructor 
-*  test: function that holds the implemented code to test
-*  params: needed params for the test function
-*/
+
+/**
+ * @description The SpeedTest constructor
+ * @param {Function} - Test to launch
+ * @param {Object}[optional] - Configuration passed to test. If no configuration is passed Test will be launch with
+ * the default configuration
+ */
 function SpeedTest(test, config) {
    const testConfig = config || defaultConfig;
    this.test = test;
@@ -12,10 +14,9 @@ function SpeedTest(test, config) {
    this.numOfTimes = testConfig.numOfTimes;
 }
 
-/*
-*  The SpeedTest constructorprototype that holds the 
-*  SpeedTest executor
-*/
+/**
+ * @description The SpeedTest constructor prototype that holds the SpeedTest executor
+ */
 SpeedTest.prototype = {
   executor: function() {
     var dateInit, dateEnd, totalTime = 0,

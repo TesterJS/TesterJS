@@ -6,9 +6,23 @@
   "engines": {
     "node": "6.11.0"
   },
+  "config": {
+    "blanket": {
+      "pattern": "./test/**/*-test.js",
+      "data-cover-never": [
+        "node_modules",
+        "public"
+      ],
+      "data-cover-reporter-options": {
+        "shortnames": true
+      }
+    }
+  },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "coverageReport": "nyc --reporter=lcov mocha",
+    "testCov": "nyc mocha" 
   },
   "repository": {
     "type": "git",
@@ -25,5 +39,11 @@
   "bugs": {
     "url": "https://github.com/siciliajuan/Tester/issues"
   },
-  "homepage": "https://github.com/siciliajuan/Tester#readme"
+  "homepage": "https://github.com/siciliajuan/Tester#readme",
+  "devDependencies": {
+    "chai": "4.1.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.5.0",
+    "nyc": "11.1.0"
+  }
 }

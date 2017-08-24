@@ -58,7 +58,7 @@ var testE = function(params) {
 }
 
 /**
- * @description  Opmized Generic For loop
+ * @description  Optimized Generic For loop
  */
 
 var testF = function(params) {
