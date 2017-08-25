@@ -26,7 +26,11 @@ To start using TesterJS only need to follow the next steps
 
 ## Running the tests
 
-TODO: // Tests comming soon
+For running the test you only have to run test as usual:
+
+```
+npm test
+```
 
 ## Current Version
 
