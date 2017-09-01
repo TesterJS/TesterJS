@@ -1,5 +1,5 @@
 'use strict';
-const defaultConfig = require('./config/Config');
+const defaultConfig = require('./config/config');
 
 /**
  * @description The SpeedTest constructor

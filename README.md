@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=master)](https://travis-ci.org/TesterJS/TesterJS)
+
 # TesterJS
 
 TesterJS is a simple library which let you compare in terms of performance one or several piecces of code. 
@@ -24,7 +26,11 @@ To start using TesterJS only need to follow the next steps
 
 ## Running the tests
 
-TODO: // Tests comming soon
+For running the test you only have to run test as usual:
+
+```
+npm test
+```
 
 ## Current Version
 
