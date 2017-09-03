@@ -1,23 +1,25 @@
 'use strict';
 
-const chalk = require('chalk')
+const chalk = require('chalk');
 const defaultConfig = require('./config/config');
 
 /**
+ * @constructor
  * @description The SpeedTest constructor
- * @param {Function} - Test to launch
- * @param {Object}[optional] - Configuration passed to test. If no configuration is passed Test will be launch with
- * the default configuration
+ * @param {Object} test - Test function to launch
+ * @param {Object} config - Configuration passed to test. If no configuration
+ * is passed Test will be launch with the default configuration
  */
 function SpeedTest(test, config) {
-   const testConfig = config || defaultConfig;
-   this.test = test;
-   this.params = testConfig.params;
-   this.numOfTimes = testConfig.numOfTimes;
+  const testConfig = config || defaultConfig;
+  this.test = test;
+  this.params = testConfig.params;
+  this.numOfTimes = testConfig.numOfTimes;
 }
 
 /**
- * @description The SpeedTest constructor prototype that holds the SpeedTest executor
+ * @description The SpeedTest constructor prototype that holds the SpeedTest
+ * executor
  */
 SpeedTest.prototype = {
   executor: function() {
@@ -26,14 +28,14 @@ SpeedTest.prototype = {
       chalk.yellow(
         'Total time ' + this.test.name
       ));
-    while(i--) {
+    while (i--) {
       this.test(this.params);
     }
     console.timeEnd(
       chalk.yellow(
-      'Total time ' + this.test.name
-    ));
- }
+        'Total time ' + this.test.name
+      ));
+  },
 };
 
 module.exports = SpeedTest;

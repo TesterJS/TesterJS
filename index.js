@@ -7,13 +7,15 @@ const SpeedTest = require('./app/tester');
 *  The code a to test
 */
 var testA = function(params) {
-    var a = params[0];
-    var b = params[1];
-    var c = params[2];
-    var d = params[3];
-    var e = params[4];
-    var f = params[5];
-    var g = a + b + c + d + e + f;
+  var a = params[0];
+  var b = params[1];
+  var c = params[2];
+  var d = params[3];
+  var e = params[4];
+  var f = params[5];
+  var g = a + b + c + d + e + f;
+
+  return g;
 };
 
 
@@ -22,6 +24,7 @@ var testA = function(params) {
 */
 var testB = function(params) {
  var c = params[0] + params[1] + params[2] + params[3] + params[4] + params[5];
+  return c;
 };
 
 /*
@@ -31,6 +34,8 @@ var testC = function(params) {
     var total = params.reduce(function(sum, value) {
         return sum + value;
     }, 0);
+
+  return total;
 };
 
 /**
@@ -57,7 +62,7 @@ var testE = function(params) {
     total += params[i];
   }
   return total;
-}
+};
 
 /**
  * @description  Optimized Generic For loop
