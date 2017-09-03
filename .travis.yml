@@ -3,4 +3,5 @@ node_js:
   - '6'
 install:
   - npm install
-  - ./node_modules/eslint/bin/eslint app/**
+  - npm test
+  - npm run eslint

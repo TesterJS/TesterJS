@@ -10,7 +10,8 @@
     "start": "node index.js",
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
-    "testCov": "nyc mocha"
+    "testCov": "nyc mocha",
+    "eslint": "node_modules/eslint/bin/eslint.js app/**"
   },
   "repository": {
     "type": "git",
