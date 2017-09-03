@@ -1,4 +1,6 @@
 'use strict';
+
+const chalk = require('chalk')
 const defaultConfig = require('./config/config');
 
 /**
@@ -19,14 +21,19 @@ function SpeedTest(test, config) {
  */
 SpeedTest.prototype = {
   executor: function() {
-    var dateInit, dateEnd, totalTime = 0,
-       i = this.numOfTimes;
-    console.time('Total time ' + this.test.name);
+    let i = this.numOfTimes;
+    console.time(
+      chalk.yellow(
+        'Total time ' + this.test.name
+      ));
     while(i--) {
       this.test(this.params);
     }
-    console.timeEnd('Total time ' + this.test.name);
+    console.timeEnd(
+      chalk.yellow(
+      'Total time ' + this.test.name
+    ));
  }
-}
+};
 
-module.exports = SpeedTest
+module.exports = SpeedTest;
