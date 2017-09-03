@@ -51,7 +51,7 @@ var testD = function(params) {
 };
 
 /**
- * @description  Opmized Generic For loop
+ * @description  Optimized Generic For loop
  */
 
 var testE = function(params) {
@@ -79,7 +79,7 @@ var testF = function(params) {
 
 
 /*
-*  We create the speedTest using it's constructor for the
+*  We create the speedTest using its constructor for the
 *  implementation that we want to test
 */
 var speedTestA = new SpeedTest(testA);
