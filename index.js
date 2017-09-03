@@ -3,9 +3,12 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const SpeedTest = require('./app/tester');
 
-/*
-*  The code a to test
-*/
+/**
+ * @description The aim idea of this function is to create a variable which
+ * store the value of each params value.
+ * @param {Array} params - List of values to be added and get a the total
+ * @returns {Number} total
+ */
 var testA = function(params) {
   var a = params[0];
   var b = params[1];
@@ -19,9 +22,11 @@ var testA = function(params) {
 };
 
 
-/*
-*  The code b to test
-*/
+/**
+ * @description
+ * @param {Array} params - List of values to be added and get a the total
+ * @returns {Number} total
+ */
 var testB = function(params) {
  var c = params[0] + params[1] + params[2] + params[3] + params[4] + params[5];
   return c;
@@ -95,23 +100,30 @@ figlet('TesterJS', function(err, data) {
     console.dir(err);
     return;
   }
+
+  executeTests();
+
+});
+
+function executeTests() {
   console.log(chalk.blue(
     figlet.textSync('TesterJS')
   ));
 
-  console.log(chalk.bold.blue('TEST RESULTS'));
+  const tests = [
+    speedTestA,
+    speedTestB,
+    speedTestC,
+    speedTestD,
+    speedTestE,
+    speedTestF
+  ];
 
-  speedTestA.executor();
-// Show in console average time for execute this test
-  speedTestB.executor();
-// Show in console average time for execute this test
-  speedTestC.executor();
-// Show in console average time for execute this test
-  speedTestD.executor();
-// Show in console average time for execute this test
-  speedTestE.executor();
-// Show in console average time for execute this test
-  speedTestF.executor();
-});
+  console.log(chalk.bold.blue('TEST RESULTS'));
+  
+  for(let i = 0; i < tests.length; i += 1) {
+    tests[i].executor();
+  }
+}
 
 
