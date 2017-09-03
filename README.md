@@ -38,7 +38,7 @@ TesterJS 0.1.0
 
 ## Authors
 
-**Juan Manuel Ruiz** & **Juan Sicilia**
+**[Juan Manuel Ruiz](https://github.com/JuanMaRuiz)** & **[Juan Sicilia](https://github.com/siciliajuan)**
 
 ## License
 
