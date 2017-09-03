@@ -10,7 +10,8 @@
     "start": "node index.js",
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
-    "testCov": "nyc mocha"
+    "testCov": "nyc mocha",
+    "eslint": "node_modules/eslint/bin/eslint.js app/**"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,13 @@
   "homepage": "https://github.com/siciliajuan/Tester#readme",
   "devDependencies": {
     "chai": "4.1.1",
+    "eslint": "4.6.0",
+    "eslint-config-google": "0.9.1",
     "mocha": "3.5.0",
     "nyc": "11.1.0"
+  },
+  "dependencies": {
+    "chalk": "2.1.0",
+    "figlet": "1.2.0"
   }
 }
