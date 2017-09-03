@@ -4,8 +4,8 @@ const chalk = require('chalk');
 const SpeedTest = require('./app/tester');
 
 /**
- * @description The aim idea of this function is to create a variable which
- * store the value of each params value.
+ * @description The aim idea of this function is to create a variable for every
+ * param value which contains the value of it.
  * @param {Array} params - List of values to be added and get a the total
  * @returns {Number} total
  */
@@ -84,8 +84,8 @@ var testF = function(params) {
 
 
 /*
-*  We create the speedTest using its constructor for the
-*  implementation that we want to test
+*  We create the speedTest using its constructor for the implementation that we
+*  want to test
 */
 var speedTestA = new SpeedTest(testA);
 var speedTestB = new SpeedTest(testB);
@@ -120,7 +120,7 @@ function executeTests() {
   ];
 
   console.log(chalk.bold.blue('TEST RESULTS'));
-  
+
   for(let i = 0; i < tests.length; i += 1) {
     tests[i].executor();
   }
