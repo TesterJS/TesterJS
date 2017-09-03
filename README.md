@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=master)](https://travis-ci.org/TesterJS/TesterJS)
+[![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=feature-unit-test-config)](https://travis-ci.org/TesterJS/TesterJS)
 
 # TesterJS
 
