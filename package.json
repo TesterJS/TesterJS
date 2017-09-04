@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siciliajuan/Tester.git"
+    "url": "git+https://github.com/TesterJS/TesterJS.git"
   },
   "keywords": [
     "js",
@@ -26,9 +26,9 @@
   "author": "Juan Sicilia, JuanMa Ruiz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/siciliajuan/Tester/issues"
+    "url": "https://github.com/testerjs/testerjs/issues"
   },
-  "homepage": "https://github.com/siciliajuan/Tester#readme",
+  "homepage": "https://github.com/testerjs/testerjs#readme",
   "devDependencies": {
     "chai": "4.1.1",
     "eslint": "4.6.0",
