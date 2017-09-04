@@ -9,13 +9,13 @@ const defaultTests = {
    * @return {Number} total
    */
   testA: function(params) {
-    var a = params[0];
-    var b = params[1];
-    var c = params[2];
-    var d = params[3];
-    var e = params[4];
-    var f = params[5];
-    var g = a + b + c + d + e + f;
+    let a = params[0];
+    let b = params[1];
+    let c = params[2];
+    let d = params[3];
+    let e = params[4];
+    let f = params[5];
+    let g = a + b + c + d + e + f;
 
     return g;
   },
@@ -42,8 +42,8 @@ const defaultTests = {
    * @return {Number} total
    */
   testD: function(params) {
-    var total = 0;
-    for(var i = 0; i < params.length; i++) {
+    let total = 0;
+    for (let i = 0; i < params.length; i++) {
       total += params[i];
     }
     return total;
@@ -56,7 +56,7 @@ const defaultTests = {
     const max = params.length;
     let total = 0,
       i = 0;
-    for(; i < max; i += 1) {
+    for (; i < max; i += 1) {
       total += params[i];
     }
     return total;
@@ -66,13 +66,13 @@ const defaultTests = {
    * @return {Number} total
    */
   testF: function(params) {
-    var i = params.length,
+    let i = params.length,
       total = 0;
-    while(i--) {
+    while (i--) {
       total += params[i];
     }
     return total;
-  }
+  },
 };
 
 module.exports = defaultTests;
