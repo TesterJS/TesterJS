@@ -96,7 +96,7 @@ var speedTestF = new SpeedTest(testF);
 
 figlet('TesterJS', function(err, data) {
   if (err) {
-    console.log('Something went wrong...');
+    console.log(chalk.bold.red('Something went wrong...'));
     console.dir(err);
     return;
   }
