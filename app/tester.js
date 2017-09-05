@@ -1,6 +1,7 @@
 'use strict';
 
 const chalk = require('chalk');
+const now = require('performance-now');
 const defaultConfig = require('./config/config');
 
 /**
@@ -24,17 +25,16 @@ function SpeedTest(test, config) {
 SpeedTest.prototype = {
   executor: function() {
     let i = this.numOfTimes;
-    console.time(
-      chalk.yellow(
-        'Total time ' + this.test.name
-      ));
+    const timeStart = now();
+
     while (i--) {
       this.test(this.params);
     }
-    console.timeEnd(
-      chalk.yellow(
-        'Total time ' + this.test.name
-      ));
+
+    const timeEnd = now();
+    console.log(chalk.yellow('Total time ' +
+        this.test.name + ' ' + (timeEnd - timeStart).toFixed(3) + ' ms.'
+    ));
   },
 };
 

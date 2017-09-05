@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "chalk": "2.1.0",
-    "figlet": "1.2.0"
+    "figlet": "1.2.0",
+    "performance-now": "2.1.0"
   }
 }
