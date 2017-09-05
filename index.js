@@ -25,11 +25,11 @@ figlet('TesterJS', function(err, data) {
     return;
   }
 
-  executeTests();
+  executeTester();
 
 });
 
-function executeTests() {
+function executeTester() {
   let i = 0;
 
   console.log(chalk.blue(

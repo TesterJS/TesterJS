@@ -1,1 +1,2 @@
 test/**/*.js
+app/default-tests/**/*.js
