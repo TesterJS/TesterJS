@@ -2,16 +2,19 @@
   "name": "javascript-performance-tester",
   "version": "0.1.0",
   "description": "JavaScript Perfomance Tester tool",
-  "main": "index.js",
+  "main": "./src/tester.js",
   "engines": {
     "node": "6.11.0"
+  },
+  "bin": {
+    "tester": "./bin/tester.js"
   },
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
     "testCov": "nyc mocha",
-    "eslint": "node_modules/eslint/bin/eslint.js app/**"
+    "eslint": "node_modules/eslint/bin/eslint.js src/**"
   },
   "repository": {
     "type": "git",
@@ -40,5 +43,9 @@
     "chalk": "2.1.0",
     "figlet": "1.2.0",
     "performance-now": "2.1.0"
-  }
+  },
+  "files": [
+    "bin",
+    "src"
+  ]
 }

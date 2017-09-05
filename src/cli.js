@@ -1,8 +1,8 @@
 'use strict';
 const figlet = require('figlet');
 const chalk = require('chalk');
-const SpeedTest = require('./app/tester');
-const defaultTests = require('./app/default-tests/default-tests');
+const SpeedTest = require('./tester');
+const defaultTests = require('./default-tests/default-tests');
 
 
 /*
@@ -11,7 +11,7 @@ const defaultTests = require('./app/default-tests/default-tests');
 */
 let listOfTest = [];
 
-for ( let prop in  defaultTests) {
+for ( let prop in defaultTests) {
   if (defaultTests.hasOwnProperty(prop) ) {
     listOfTest.push(new SpeedTest(defaultTests[prop]));
   }
@@ -26,9 +26,11 @@ figlet('TesterJS', function(err, data) {
   }
 
   executeTester();
-
 });
 
+/**
+ * Main function execute all tests
+ */
 function executeTester() {
   let i = 0;
 

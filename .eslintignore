@@ -1,2 +1,2 @@
 test/**/*.js
-app/default-tests/**/*.js
+src/default-tests/**/*.js
