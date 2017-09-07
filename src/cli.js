@@ -1,14 +1,36 @@
 'use strict';
 const figlet = require('figlet');
 const chalk = require('chalk');
+const path = require('path');
+const meow = require('meow');
 const SpeedTest = require('./tester');
-const defaultTests = require('./default-tests/default-tests');
 
+
+const cli = meow(`
+	Usage
+	  $ foo <input>
+
+	Options
+	  --rainbow, -r  Include a rainbow
+
+	Examples
+	  $ foo unicorns --rainbow
+	  🌈 unicorns 🌈
+`, {
+  alias: {
+    f: 'file'
+  }
+});
+
+
+console.log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
+
+const defaultTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
 
 /*
-*  We create the speedTest using its constructor for the implementation that we
-*  want to test
-*/
+ *  We create the speedTest using its constructor for the implementation that we
+ *  want to test
+ */
 let listOfTest = [];
 
 for ( let prop in defaultTests) {
@@ -44,5 +66,3 @@ function executeTester() {
     listOfTest[i].executor();
   }
 }
-
-

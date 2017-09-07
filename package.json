@@ -54,6 +54,7 @@
     "chalk": "2.1.0",
     "figlet": "1.2.0",
     "meow": "3.7.0",
+    "path": "0.12.7",
     "performance-now": "2.1.0",
     "update-notifier": "2.2.0"
   },
