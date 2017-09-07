@@ -1,8 +1,8 @@
 language: node_js
-before_install: npm run eslint
-after_success: npm run coverage && cat ./coverage/lcov.info | coveralls
 node_js:
   - '6'
 install:
   - npm install
   - npm test
+after_install: npm run eslint
+after_success: npm run coverageReport
