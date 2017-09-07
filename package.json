@@ -26,7 +26,18 @@
     "tester",
     "performance"
   ],
-  "author": "Juan Sicilia, JuanMa Ruiz",
+  "contributors": [
+    {
+      "name": "Juan Sicilia",
+      "email": "",
+      "url": "http://www..com"
+    },
+    {
+      "name": "JuanMa Ruiz",
+      "email": "ruizjuanma@gmail.com",
+      "url": "http://www.juanmaruiz.es"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/testerjs/testerjs/issues"
