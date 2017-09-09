@@ -23,5 +23,9 @@ describe('Tester constructor', function () {
         it('should be and instance of Tester', () => {
             assert.instanceOf(foo, Tester, 'foo is an instance of Tester');
         });
+        it('should return the number of executions', () => {
+          //const result = foo.executor().toString;
+          //console.log('foo: ', result)
+        });
     });
 });

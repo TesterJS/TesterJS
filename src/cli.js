@@ -17,10 +17,10 @@ const cli = meow(`
 	  $ foo unicorns --rainbow
 	  🌈 unicorns 🌈
 `, {
-  alias: {
-    f: 'file'
-  }
-});
+    alias: {
+      f: 'file',
+    },
+  });
 
 
 console.log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);

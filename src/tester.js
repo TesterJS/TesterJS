@@ -33,7 +33,8 @@ SpeedTest.prototype = {
 
     const timeEnd = now();
     console.log(chalk.yellow('Total time ' +
-        this.test.name + ' ' + (timeEnd - timeStart).toFixed(3) + ' ms.'
+        this.test.name + ' ' + (timeEnd - timeStart).toFixed(3) + ' ms.' +
+         '\nNumber of times: ' + this.numOfTimes
     ));
   },
 };
