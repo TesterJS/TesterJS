@@ -23,9 +23,11 @@ describe('Tester constructor', function () {
         it('should be and instance of Tester', () => {
             assert.instanceOf(foo, Tester, 'foo is an instance of Tester');
         });
-        it('should return the number of executions', () => {
-          //const result = foo.executor().toString;
-          //console.log('foo: ', result)
+        it('should return the title of the test', () => {
+          expect(foo.executor().testTitle).to.equal('fooTest');
+        });
+        it('should return and object with a property named "average" that is the number of executions', () => {
+          expect(foo.executor()).to.have.property('average');
         });
     });
 });
