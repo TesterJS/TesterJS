@@ -1,5 +1,6 @@
 TODO LIST:
 
+* Output should should the best and worse time of execution
 * Write in ES6
 * Add help
 * Different ouput formats:
