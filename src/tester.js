@@ -25,18 +25,41 @@ function SpeedTest(test, config) {
 SpeedTest.prototype = {
   executor: function() {
     let i = this.numOfTimes;
-    const timeStart = now();
+    let times = [],
+        totalTime,
+        maxTime,
+        minTime;
 
     while (i--) {
+      const timeStart = now();
       this.test(this.params);
+      const timeEnd = now();
+      totalTime = (timeEnd - timeStart);
+      times.push(totalTime);
     }
 
-    const timeEnd = now();
-    console.log(chalk.yellow('Total time ' +
-        this.test.name + ' ' + (timeEnd - timeStart).toFixed(3) + ' ms.' +
-         '\nNumber of times: ' + this.numOfTimes
-    ));
+    maxTime = Math.max.apply(null, times);
+    minTime = Math.min.apply(null, times);
+
+    return {
+      testTitle: this.test.name,
+      numberOfExecutions: this.numOfTimes,
+      average: calcAvg.call(this, times),
+      maxTime,
+      minTime,
+    }
   },
 };
+
+function calcAvg(times) {
+  let sum = 0,
+      i = 0,
+      max = times.length;
+  for ( ; i < max; i += 1 ) {
+      sum +=  times[i];
+  }
+
+  return (sum / max);
+}
 
 module.exports = SpeedTest;

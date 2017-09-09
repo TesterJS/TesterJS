@@ -4,6 +4,8 @@ const chalk = require('chalk');
 const path = require('path');
 const meow = require('meow');
 const SpeedTest = require('./tester');
+const reporter = require('./reporter');
+const colors = require('./config/colors');
 
 
 const cli = meow(`
@@ -23,7 +25,7 @@ const cli = meow(`
   });
 
 
-console.log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
+// console.log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
 
 const defaultTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
 
@@ -56,13 +58,13 @@ figlet('TesterJS', function(err, data) {
 function executeTester() {
   let i = 0;
 
-  console.log(chalk.blue(
+  console.log(colors.todo(
     figlet.textSync('TesterJS')
   ));
 
-  console.log(chalk.bold.blue('TEST RESULTS'));
+  console.log(colors.log('TEST RESULTS'));
 
   for (; i < listOfTest.length; i += 1) {
-    listOfTest[i].executor();
+    console.log('\n' + reporter.generateOutputStr(listOfTest[i].executor()));
   }
 }

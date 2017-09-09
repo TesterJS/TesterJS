@@ -1,6 +1,6 @@
 TODO LIST:
 
-* Output should should the best and worse time of execution
+* Output should show the best and worst time of all the executions
 * Write in ES6
 * Add help
 * Different ouput formats:
