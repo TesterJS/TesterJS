@@ -6,6 +6,7 @@ const meow = require('meow');
 const SpeedTest = require('./tester');
 const reporter = require('./reporter');
 const colors = require('./config/colors');
+const log = console.log;
 
 
 const cli = meow(`
@@ -25,7 +26,7 @@ const cli = meow(`
   });
 
 
-// console.log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
+// log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
 
 const defaultTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
 
@@ -44,7 +45,7 @@ for ( let prop in defaultTests) {
 
 figlet('TesterJS', function(err, data) {
   if (err) {
-    console.log(chalk.bold.red('Something went wrong...'));
+    log(chalk.bold.red('Something went wrong...'));
     console.dir(err);
     return;
   }
@@ -58,13 +59,13 @@ figlet('TesterJS', function(err, data) {
 function executeTester() {
   let i = 0;
 
-  console.log(colors.todo(
+  log(colors.todo(
     figlet.textSync('TesterJS')
   ));
 
-  console.log(colors.log('TEST RESULTS'));
+  log(colors.log('TEST RESULTS'));
 
   for (; i < listOfTest.length; i += 1) {
-    console.log('\n' + reporter.generateOutputStr(listOfTest[i].executor()));
+    log('\n' + reporter.generateOutputStr(listOfTest[i].executor()));
   }
 }
