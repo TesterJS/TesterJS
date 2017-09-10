@@ -37,7 +37,7 @@ describe('Tester constructor', function () {
         });
     });
     describe('Invoking Tester with incorrect params', () => {
-      it('should return 500 as number of executions if no passed as argument', () => {
+      it('should return 5000 (default number of executions) as number of executions if no passed as argument', () => {
         let foo;
         const params = {
           params: [1,1]
