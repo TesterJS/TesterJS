@@ -12,7 +12,7 @@ TODO LIST:
     - Check that a test iterates N number of times as its configuration defines
     - Tester return the time in milliseconds
 * Prepare to recieve two files with the functions to compare against each other
-    - As ci tool you should provide a coople of files you want to compare
+    - As ci tool user should provide a coople of files that he wants to compare
 * Nice to have:
     - Give some improvement ideas for the functions passed
     - TDD

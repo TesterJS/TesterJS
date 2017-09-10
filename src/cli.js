@@ -9,16 +9,16 @@ const colors = require('./config/colors');
 
 
 const cli = meow(`
-	Usage
-	  $ foo <input>
+  Usage
+    $ foo <input>
 
-	Options
-	  --rainbow, -r  Include a rainbow
+  Options
+    --rainbow, -r  Include a rainbow
 
-	Examples
-	  $ foo unicorns --rainbow
-	  🌈 unicorns 🌈
-`, {
+  Examples
+    $ foo unicorns --rainbow
+    🌈 unicorns 🌈
+  `, {
     alias: {
       f: 'file',
     },

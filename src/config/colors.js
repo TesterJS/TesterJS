@@ -12,5 +12,5 @@ module.exports = {
   errorSource: chalk.gray,
   errorStack: chalk.gray,
   stack: chalk.red,
-  information: chalk.magenta
-}
+  information: chalk.magenta,
+};

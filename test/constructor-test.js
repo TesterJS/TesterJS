@@ -24,6 +24,7 @@ describe('Tester constructor', function () {
             assert.instanceOf(foo, Tester, 'foo is an instance of Tester');
         });
         it('should return the title of the test', () => {
+          console.log(foo.executor())
           expect(foo.executor().testTitle).to.equal('fooTest');
         });
         it('should return and object with a property named "average" that is the number of executions', () => {

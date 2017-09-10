@@ -12,7 +12,10 @@ module.exports = {
 
   "rules": {
     "indent": ["error", 2],
-    "max-len": ["error", 120]
+    "max-len": ["error", 120],
+    "one-var": ["error",
+      { var: "always", let: "always", const: "never" }
+    ]
   }
 
 };

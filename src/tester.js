@@ -1,6 +1,4 @@
 'use strict';
-
-const chalk = require('chalk');
 const now = require('performance-now');
 const defaultConfig = require('./config/config');
 
@@ -24,11 +22,11 @@ function SpeedTest(test, config) {
  */
 SpeedTest.prototype = {
   executor: function() {
-    let i = this.numOfTimes;
-    let times = [],
-        totalTime,
-        maxTime,
-        minTime;
+    let i = this.numOfTimes,
+      times = [],
+      totalTime,
+      maxTime,
+      minTime;
 
     while (i--) {
       const timeStart = now();
@@ -47,16 +45,21 @@ SpeedTest.prototype = {
       average: calcAvg.call(this, times),
       maxTime,
       minTime,
-    }
+    };
   },
 };
 
+/**
+ * Given an array of times calc the average
+ * @param  {Array} times Array of times for every execution
+ * @return {Number}
+ */
 function calcAvg(times) {
   let sum = 0,
-      i = 0,
-      max = times.length;
+    i = 0,
+    max = times.length;
   for ( ; i < max; i += 1 ) {
-      sum +=  times[i];
+    sum += times[i];
   }
 
   return (sum / max);

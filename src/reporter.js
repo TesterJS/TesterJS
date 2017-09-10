@@ -1,5 +1,4 @@
 'use strict';
-const chalk = require('chalk');
 const colors = require('./config/colors.js');
 
 const generateOutputStr = function(info) {
@@ -11,5 +10,5 @@ const generateOutputStr = function(info) {
 };
 
 module.exports = {
-  generateOutputStr
+  generateOutputStr,
 };
