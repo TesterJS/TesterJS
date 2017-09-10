@@ -11,8 +11,9 @@ const defaultConfig = require('./config/config');
  */
 function SpeedTest(test, config) {
     this.test = test;
-    this.params = config.params || defaultConfig.params;
-    this.numOfTimes = config.numOfTimes || defaultConfig.numOfTimes;
+    const testConfig = config || defaultConfig;
+    this.params = (typeof testConfig.params === 'undefined') ? defaultConfig.params : testConfig.params;
+    this.numOfTimes = (typeof testConfig.numOfTimes === 'undefined') ? defaultConfig.numOfTimes : testConfig.numOfTimes;
 }
 
 /**

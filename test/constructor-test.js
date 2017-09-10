@@ -3,6 +3,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 const assert = chai.assert;
+chai.use(require('chai-string'));
 
 const Tester = require('../src/tester');
 

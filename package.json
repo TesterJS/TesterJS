@@ -46,6 +46,7 @@
   "homepage": "https://github.com/testerjs/testerjs#readme",
   "devDependencies": {
     "chai": "4.1.1",
+    "chai-string": "1.4.0",
     "eslint": "4.6.0",
     "eslint-config-google": "0.9.1",
     "mocha": "3.5.0",
