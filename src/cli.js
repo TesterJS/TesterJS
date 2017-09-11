@@ -3,6 +3,7 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const path = require('path');
 const meow = require('meow');
+const updateNotifier = require('update-notifier');
 const SpeedTest = require('./tester');
 const reporter = require('./reporter');
 const colors = require('./config/colors');
@@ -11,24 +12,31 @@ const log = console.log;
 
 const cli = meow(`
   Usage
-    $ foo <input>
+    $ tester <file-to-test-one> <file-to-test-two>
 
   Options
-    --rainbow, -r  Include a rainbow
+    --format, -j     Output format: cli|json|tap
 
   Examples
-    $ foo unicorns --rainbow
-    🌈 unicorns 🌈
+    $ foo foo.js bazinga.js --format=json
   `, {
     alias: {
-      f: 'file',
+      f: 'format',
     },
   });
 
+updateNotifier({pkg: cli.pkg}).notify();
 
-// log(`cli.input[0]: ${cli.input[0]} and cli.flags: ${cli.flags}`);
+// This code should be added when Tester is prepared to receive a couple of files
+// if (!cli.input[0] || !cli.input[1]) {
+//   console.error('Please you have to specify two files');
+//   process.exit(1);
+// }
+
+//log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
 
 const defaultTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
+
 
 /*
  *  We create the speedTest using its constructor for the implementation that we
