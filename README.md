@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=feature-customized-reporter)](https://travis-ci.org/TesterJS/TesterJS)
 
+![TesterJS output](/screenshots/Tester_output.png "TesterJS output")
+
 # TesterJS
 
 TesterJS is a simple library which let you compare in terms of performance one or several piecces of code. 
@@ -38,7 +40,7 @@ TesterJS 0.1.0
 
 ## Authors
 
-**Juan Manuel Ruiz** & **Juan Sicilia**
+**[Juan Manuel Ruiz](https://github.com/JuanMaRuiz)** & **[Juan Sicilia](https://github.com/siciliajuan)**
 
 ## License
 

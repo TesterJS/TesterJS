@@ -2,20 +2,24 @@
   "name": "javascript-performance-tester",
   "version": "0.1.0",
   "description": "JavaScript Perfomance Tester tool",
-  "main": "index.js",
+  "main": "./src/tester.js",
   "engines": {
     "node": "6.11.0"
+  },
+  "bin": {
+    "tester": "./bin/tester.js"
   },
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
     "testCov": "nyc mocha",
-    "eslint": "node_modules/eslint/bin/eslint.js app/**"
+    "eslint": "node_modules/eslint/bin/eslint.js src/**",
+    "lintFix": "node_modules/eslint/bin/eslint.js src/** --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siciliajuan/Tester.git"
+    "url": "git+https://github.com/TesterJS/TesterJS.git"
   },
   "keywords": [
     "js",
@@ -23,14 +27,26 @@
     "tester",
     "performance"
   ],
-  "author": "Juan Sicilia, JuanMa Ruiz",
+  "contributors": [
+    {
+      "name": "Juan Sicilia",
+      "email": "siciliajuan@gmail.com",
+      "url": "http://www..com"
+    },
+    {
+      "name": "JuanMa Ruiz",
+      "email": "ruizjuanma@gmail.com",
+      "url": "http://www.juanmaruiz.es"
+    }
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/siciliajuan/Tester/issues"
+    "url": "https://github.com/testerjs/testerjs/issues"
   },
-  "homepage": "https://github.com/siciliajuan/Tester#readme",
+  "homepage": "https://github.com/testerjs/testerjs#readme",
   "devDependencies": {
     "chai": "4.1.1",
+    "chai-string": "1.4.0",
     "eslint": "4.6.0",
     "eslint-config-google": "0.9.1",
     "mocha": "3.5.0",
@@ -38,6 +54,14 @@
   },
   "dependencies": {
     "chalk": "2.1.0",
-    "figlet": "1.2.0"
-  }
+    "figlet": "1.2.0",
+    "meow": "3.7.0",
+    "path": "0.12.7",
+    "performance-now": "2.1.0",
+    "update-notifier": "2.2.0"
+  },
+  "files": [
+    "bin",
+    "src"
+  ]
 }

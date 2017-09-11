@@ -1,21 +1,20 @@
 TODO LIST:
 
-* Add README
-* Add project configuration:
-    - editorconfig (√)
-    - CI
-* Create as node module (√)
+* Output should show the best and worst time of all the executions
+* Write in ES6
+* Add help
+* Different ouput formats:
+  - Table
+  - Styled params and returned values
 * Add Unit Tests
     - Function return what is expected and sets correctly its specific configuration
     - Function return what is expected and sets the default configuration
     - Check that a test iterates N number of times as its configuration defines
-* Add Coverage
-* Prepare to recieve and array of tests
-    - Pass array of objects with the following structure:
-        - A function test${Name} the coded is going to be tested
-        - An array of params
-* Write in ES6
+    - Tester return the time in milliseconds
+* Prepare to recieve two files with the functions to compare against each other
+    - As ci tool user should provide a coople of files that he wants to compare
 * Nice to have:
+    - Give some improvement ideas for the functions passed
     - TDD
     - Add perfomance test to DOM manipulation
 
