@@ -22,6 +22,7 @@ function SpeedTest(test, config) {
  */
 SpeedTest.prototype = {
   executor: function() {
+    const test = this.test;
     let i = this.numOfTimes,
       times = [],
       totalTime,
@@ -30,7 +31,7 @@ SpeedTest.prototype = {
 
     while (i--) {
       const timeStart = now();
-      this.test(this.params);
+      test(this.params);
       const timeEnd = now();
       totalTime = (timeEnd - timeStart);
       times.push(totalTime);
