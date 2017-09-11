@@ -3,6 +3,6 @@ node_js:
   - '6'
 install:
   - npm install
+  - npm run eslint
   - npm test
-after_script: npm run eslint
 after_success: npm run coverageReport

@@ -34,6 +34,21 @@ For running the test you only have to run test as usual:
 npm test
 ```
 
+## CLI
+
+```
+$ tester --help
+
+  Usage
+    $ psi <file-to-test-one> <file-to-test-two>
+
+  Options
+    --format     Output format: cli|json|tap
+
+  Example
+    $ foo foo.js bazinga.js --format=json
+```
+
 ## Current Version
 
 TesterJS 0.1.0
