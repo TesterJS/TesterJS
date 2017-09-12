@@ -19,6 +19,7 @@ function SpeedTest(test, config) {
 /**
  * @description The SpeedTest constructor prototype that holds the SpeedTest
  * executor
+ * @return {object} - contains the result of the performance
  */
 SpeedTest.prototype.executor = function() {
   const test = this.test;

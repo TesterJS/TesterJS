@@ -7,7 +7,7 @@ const generateOutputStr = function(info) {
     colors.pass('Best time: ' + info.minTime + ' ms.'),
     colors.error('Worst time: ' + info.maxTime + ' ms.'),
     colors.duration('Number of executions: ' + info.numberOfExecutions),
-    colors.information('Average: ' + info.average + ' ms.')
+    colors.information('Average: ' + info.average + ' ms.'),
   ].join('\n');
 };
 

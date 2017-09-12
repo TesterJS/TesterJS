@@ -2,15 +2,20 @@
 const figlet = require('figlet');
 const chalk = require('chalk');
 const SpeedTest = require('./tester');
-const reporter = require('./formats/cli');
 const colors = require('./config/colors');
 const log = console.log;
 
 let listOfTest = [];
 
+/**
+ * Get the formatter required for the used
+ *
+ * @param {string} format - flag passed by user in cli
+ * @return {string} - the required formatter
+ */
 function getReporter(format) {
   const formatter = format !== 'json' ? 'cli' : format;
-  return require(`./formats/${formatter}`);
+  return require(`./formats/${formatter}`); // eslint-disable-line import/no-dynamic-require
 }
 
 
