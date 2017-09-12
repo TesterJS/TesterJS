@@ -8,11 +8,19 @@ const log = console.log;
 
 let listOfTest = [];
 
+function getReporter(format) {
+  const formatter = format !== 'json' ? 'cli' : format;
+  return require(`./formats/${formatter}`);
+}
+
+
 /**
  * Execute every test a send the output object to the reporter
+ * @param {string} format - Output format for performance
  */
-function executeTester() {
+function executeTester(format) {
   let i = 0;
+  const reporter = getReporter(format);
 
   log(colors.todo(
     figlet.textSync('TesterJS')
@@ -21,11 +29,11 @@ function executeTester() {
   log(colors.log('TEST RESULTS'));
 
   for (; i < listOfTest.length; i += 1) {
-    log('\n' + reporter.generateOutputStr(listOfTest[i].executor()));
+    log(`\n ${reporter.generateOutputStr(listOfTest[i].executor())}`);
   }
 }
 
-module.exports.output = (testsInFile) => {
+module.exports.output = (testsInFile, format) => {
   // We create a new Tester instance for every test defined in int the
   // file passed as argument to te performance tester tool
   for ( let prop in testsInFile) {
@@ -41,7 +49,7 @@ module.exports.output = (testsInFile) => {
       return;
     }
 
-    executeTester();
+    executeTester(format);
     process.exit();
   });
 };

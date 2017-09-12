@@ -1,5 +1,12 @@
 'use strict';
 
-module.exports = (info) => {
-  return JSON.stringify(info);
+const generateOutputStr = (info) => {
+  return JSON.stringify({
+    results: info,
+  }, null, 2);
+};
+
+
+module.exports = {
+  generateOutputStr,
 };

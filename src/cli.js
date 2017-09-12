@@ -10,7 +10,7 @@ const cli = meow(`
     $ tester <file-to-test-one> <file-to-test-two>
 
   Options
-    --format, -j     Output format: cli|json|tap
+    --format, -j     Output format: cli|json
 
   Examples
     $ foo foo.js bazinga.js --format=json
@@ -36,4 +36,4 @@ const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require
 // TODO As we are in development process we are passing only one file: './default-tests/default-tests' or a single file
 // but in the next steps tester should accept a couple of files, and output method should receive this two files and the
 // flag
-performanceTester.output(listOfTests, cli.flags);
+performanceTester.output(listOfTests, cli.flags.format);
