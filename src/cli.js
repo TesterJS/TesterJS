@@ -33,4 +33,7 @@ updateNotifier({pkg: cli.pkg}).notify();
 const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
 
 
-performanceTester.output(listOfTests);
+// TODO As we are in development process we are passing only one file: './default-tests/default-tests' or a single file
+// but in the next steps tester should accept a couple of files, and output method should receive this two files and the
+// flag
+performanceTester.output(listOfTests, cli.flags);
