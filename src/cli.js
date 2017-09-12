@@ -5,7 +5,7 @@ const path = require('path');
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const SpeedTest = require('./tester');
-const reporter = require('./reporter');
+const reporter = require('./formats/cli');
 const colors = require('./config/colors');
 const log = console.log;
 

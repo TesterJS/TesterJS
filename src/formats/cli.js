@@ -1,5 +1,5 @@
 'use strict';
-const colors = require('./config/colors.js');
+const colors = require('../config/colors.js');
 
 const generateOutputStr = function(info) {
   return colors.title('Test title: ' + info.testTitle) + '\n' +
