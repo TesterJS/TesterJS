@@ -10,10 +10,10 @@ const defaultConfig = require('./config/config');
  * is passed Test will be launch with the default configuration
  */
 function SpeedTest(test, config) {
-    this.test = test;
-    const testConfig = config || defaultConfig;
-    this.params = (typeof testConfig.params === 'undefined') ? defaultConfig.params : testConfig.params;
-    this.numOfTimes = (typeof testConfig.numOfTimes === 'undefined') ? defaultConfig.numOfTimes : testConfig.numOfTimes;
+  this.test = test;
+  const testConfig = config || defaultConfig;
+  this.params = (typeof testConfig.params === 'undefined') ? defaultConfig.params : testConfig.params;
+  this.numOfTimes = (typeof testConfig.numOfTimes === 'undefined') ? defaultConfig.numOfTimes : testConfig.numOfTimes;
 }
 
 /**

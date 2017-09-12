@@ -33,7 +33,7 @@ updateNotifier({pkg: cli.pkg}).notify();
 //   process.exit(1);
 // }
 
-//log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
+//  log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
 
 const defaultTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
 
