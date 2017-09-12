@@ -14,7 +14,8 @@
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
     "testCov": "nyc mocha",
-    "eslint": "node_modules/eslint/bin/eslint.js src/**"
+    "eslint": "node_modules/eslint/bin/eslint.js src/**",
+    "lintFix": "node_modules/eslint/bin/eslint.js src/** --fix"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
   "contributors": [
     {
       "name": "Juan Sicilia",
-      "email": "",
+      "email": "siciliajuan@gmail.com",
       "url": "http://www..com"
     },
     {
@@ -45,6 +46,7 @@
   "homepage": "https://github.com/testerjs/testerjs#readme",
   "devDependencies": {
     "chai": "4.1.1",
+    "chai-string": "1.4.0",
     "eslint": "4.6.0",
     "eslint-config-google": "0.9.1",
     "mocha": "3.5.0",
@@ -54,6 +56,7 @@
     "chalk": "2.1.0",
     "figlet": "1.2.0",
     "meow": "3.7.0",
+    "path": "0.12.7",
     "performance-now": "2.1.0",
     "update-notifier": "2.2.0"
   },

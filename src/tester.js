@@ -1,6 +1,4 @@
 'use strict';
-
-const chalk = require('chalk');
 const now = require('performance-now');
 const defaultConfig = require('./config/config');
 
@@ -12,10 +10,10 @@ const defaultConfig = require('./config/config');
  * is passed Test will be launch with the default configuration
  */
 function SpeedTest(test, config) {
-  const testConfig = config || defaultConfig;
   this.test = test;
-  this.params = testConfig.params;
-  this.numOfTimes = testConfig.numOfTimes;
+  const testConfig = config || defaultConfig;
+  this.params = (typeof testConfig.params === 'undefined') ? defaultConfig.params : testConfig.params;
+  this.numOfTimes = (typeof testConfig.numOfTimes === 'undefined') ? defaultConfig.numOfTimes : testConfig.numOfTimes;
 }
 
 /**
@@ -24,18 +22,47 @@ function SpeedTest(test, config) {
  */
 SpeedTest.prototype = {
   executor: function() {
-    let i = this.numOfTimes;
-    const timeStart = now();
+    let i = this.numOfTimes,
+      times = [],
+      totalTime,
+      maxTime,
+      minTime;
 
     while (i--) {
+      const timeStart = now();
       this.test(this.params);
+      const timeEnd = now();
+      totalTime = (timeEnd - timeStart);
+      times.push(totalTime);
     }
 
-    const timeEnd = now();
-    console.log(chalk.yellow('Total time ' +
-        this.test.name + ' ' + (timeEnd - timeStart).toFixed(3) + ' ms.'
-    ));
+    maxTime = Math.max.apply(null, times);
+    minTime = Math.min.apply(null, times);
+
+    return {
+      testTitle: this.test.name,
+      numberOfExecutions: this.numOfTimes,
+      average: calcAvg.call(this, times),
+      maxTime,
+      minTime,
+    };
   },
 };
+
+/**
+ * Given an array of times calc the average
+ * @param  {Array} times Array of times for every execution
+ * @return {Number}
+ */
+function calcAvg(times) {
+  let sum = 0,
+    i = 0,
+    max = times.length;
+  for ( ; i < max; i += 1 ) {
+    sum += times[i];
+  }
+
+  return (sum / max);
+}
 
 module.exports = SpeedTest;

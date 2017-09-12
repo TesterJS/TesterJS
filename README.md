@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=feature-customized-reporter)](https://travis-ci.org/TesterJS/TesterJS)
 
+![TesterJS output](/screenshots/Tester_output.png "TesterJS output")
+
 # TesterJS
 
 TesterJS is a simple library which let you compare in terms of performance one or several piecces of code. 
@@ -30,6 +32,21 @@ For running the test you only have to run test as usual:
 
 ```
 npm test
+```
+
+## CLI
+
+```
+$ tester --help
+
+  Usage
+    $ psi <file-to-test-one> <file-to-test-two>
+
+  Options
+    --format     Output format: cli|json|tap
+
+  Example
+    $ foo foo.js bazinga.js --format=json
 ```
 
 ## Current Version

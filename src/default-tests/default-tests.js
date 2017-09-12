@@ -16,7 +16,6 @@ const defaultTests = {
     let e = params[4];
     let f = params[5];
     let g = a + b + c + d + e + f;
-
     return g;
   },
   /**
