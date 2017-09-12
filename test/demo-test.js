@@ -4,7 +4,7 @@ const chai = require('chai');
 const expect = chai.expect;
 const assert = chai.assert;
 
-const Tester = require('./../app/tester');
+const Tester = require('../src/tester');
 
 describe('Tester constructor', function () {
     describe('Invoking Tester with function and params', () => {
