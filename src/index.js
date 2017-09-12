@@ -26,7 +26,7 @@ function executeTester() {
 }
 
 module.exports.output = function(testsInFile) {
-  // We create a new instance from Tester for every test defined in int the
+  // We create a new Tester instance for every test defined in int the
   // file passed as argument to te performance tester tool
   for ( let prop in testsInFile) {
     if (testsInFile.hasOwnProperty(prop) ) {
