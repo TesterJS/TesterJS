@@ -1,6 +1,5 @@
 'use strict';
 const figlet = require('figlet');
-const path = require('path');
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const log = console.log;
@@ -33,7 +32,7 @@ updateNotifier({pkg: cli.pkg}).notify();
 
 //  log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
 
-const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('./default-tests/default-tests');
+//const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('../default-tests/default-tests');
 
 log(colors.todo(
   figlet.textSync('TesterJS')
@@ -46,10 +45,10 @@ figlet('TesterJS', function(err, data) {
     return;
   }
 
-  // TODO As we are in development process we are passing only one file: './default-tests/default-tests' or a single
+  // TODO As we are in development process we are passing only one file: './demo-tests/demo-tests' or a single
   // file but in the next steps tester should accept a couple of files, and output method should receive this two files
   // and the flag
-  performanceTester.output(listOfTests, cli.flags.format);
+  performanceTester.output(cli.input[0], cli.flags.format);
 
   process.exit();
 });

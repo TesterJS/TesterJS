@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 const SpeedTest = require('./tester');
 const colors = require('./config/colors');
 const log = console.log;
@@ -16,6 +17,11 @@ function getReporter(format) {
   return require(`./formats/${formatter}`); // eslint-disable-line import/no-dynamic-require
 }
 
+function normalizeFilePath(filePath) {
+  console.log('path: ', filePath);
+  return require(path.resolve(filePath));
+
+}
 
 /**
  * Execute every test a send the output object to the reporter
@@ -32,12 +38,14 @@ function executeTester(format) {
   }
 }
 
-module.exports.output = (testsInFile, format) => {
+module.exports.output = (fileOnePath, format) => {
   // We create a new Tester instance for every test defined in int the
   // file passed as argument to te performance tester tool
-  for ( let prop in testsInFile) {
-    if (testsInFile.hasOwnProperty(prop) ) {
-      listOfTest.push(new SpeedTest(testsInFile[prop]));
+
+  const fileOne = normalizeFilePath(fileOnePath)
+  for ( let prop in fileOne) {
+    if (fileOne.hasOwnProperty(prop) ) {
+      listOfTest.push(new SpeedTest(fileOne[prop]));
     }
   }
 
