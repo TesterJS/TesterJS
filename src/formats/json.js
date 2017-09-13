@@ -3,7 +3,7 @@
 const generateOutputStr = (info) => {
   return JSON.stringify({
     results: info,
-  }, null, 2);
+  }, null, 1);
 };
 
 

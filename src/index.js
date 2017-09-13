@@ -1,6 +1,4 @@
 'use strict';
-const figlet = require('figlet');
-const chalk = require('chalk');
 const SpeedTest = require('./tester');
 const colors = require('./config/colors');
 const log = console.log;
@@ -27,10 +25,6 @@ function executeTester(format) {
   let i = 0;
   const reporter = getReporter(format);
 
-  log(colors.todo(
-    figlet.textSync('TesterJS')
-  ));
-
   log(colors.log('TEST RESULTS'));
 
   for (; i < listOfTest.length; i += 1) {
@@ -47,16 +41,7 @@ module.exports.output = (testsInFile, format) => {
     }
   }
 
-  figlet('TesterJS', function(err, data) {
-    if (err) {
-      log(chalk.bold.red('Something went wrong...'));
-      console.dir(err);
-      return;
-    }
-
-    executeTester(format);
-    process.exit();
-  });
+  executeTester(format);
 };
 
 
