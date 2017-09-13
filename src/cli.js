@@ -1,6 +1,5 @@
 'use strict';
 const figlet = require('figlet');
-const chalk = require('chalk');
 const path = require('path');
 const meow = require('meow');
 const updateNotifier = require('update-notifier');
