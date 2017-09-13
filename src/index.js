@@ -20,7 +20,6 @@ function getReporter(format) {
 function normalizeFilePath(filePath) {
   console.log('path: ', filePath);
   return require(path.resolve(filePath));
-
 }
 
 /**
@@ -42,7 +41,7 @@ module.exports.output = (fileOnePath, format) => {
   // We create a new Tester instance for every test defined in int the
   // file passed as argument to te performance tester tool
 
-  const fileOne = normalizeFilePath(fileOnePath)
+  const fileOne = normalizeFilePath(fileOnePath);
   for ( let prop in fileOne) {
     if (fileOne.hasOwnProperty(prop) ) {
       listOfTest.push(new SpeedTest(fileOne[prop]));

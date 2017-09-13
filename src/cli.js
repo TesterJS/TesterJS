@@ -32,7 +32,7 @@ updateNotifier({pkg: cli.pkg}).notify();
 
 //  log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
 
-//const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('../default-tests/default-tests');
+// const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('../default-tests/default-tests');
 
 log(colors.todo(
   figlet.textSync('TesterJS')
