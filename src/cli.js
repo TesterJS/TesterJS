@@ -24,7 +24,6 @@ const cli = meow(`
 
 updateNotifier({pkg: cli.pkg}).notify();
 
-// This code should be added when Tester is prepared to receive a couple of files
 if (!cli.input[0] || !cli.input[1]) {
   log(colors.error('Please you have to specify two files'));
   process.exit(1);
