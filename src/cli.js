@@ -34,6 +34,8 @@ updateNotifier({pkg: cli.pkg}).notify();
 
 // const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('../default-tests/default-tests');
 
+// const filesToTest = [cli.input[0], cli.input[1]];
+
 log(colors.todo(
   figlet.textSync('TesterJS')
 ));
@@ -48,7 +50,7 @@ figlet('TesterJS', function(err, data) {
   // TODO As we are in development process we are passing only one file: './demo-tests/demo-tests' or a single
   // file but in the next steps tester should accept a couple of files, and output method should receive this two files
   // and the flag
-  performanceTester.output(cli.input[0], cli.flags.format);
+  performanceTester.output(cli.input[0], cli.input[1], cli.flags.format);
 
   process.exit();
 });

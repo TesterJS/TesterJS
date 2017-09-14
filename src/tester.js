@@ -29,6 +29,8 @@ SpeedTest.prototype.executor = function() {
     maxTime,
     minTime;
 
+  console.log(`test ${test}`);
+
   while (i--) {
     const timeStart = now();
     test(this.params);
