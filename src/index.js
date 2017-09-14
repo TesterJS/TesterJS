@@ -17,6 +17,11 @@ function getReporter(format) {
   return require(`./formats/${formatter}`); // eslint-disable-line import/no-dynamic-require
 }
 
+/**
+ *
+ * @param {string} filePath - Path
+ * @return {*} - Required file with the proper path
+ */
 function normalizeFilePath(filePath) {
   console.log('path: ', filePath);
   return require(path.resolve(filePath));
