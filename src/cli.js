@@ -40,11 +40,7 @@ figlet('TesterJS', function(err, data) {
     console.dir(err);
     return;
   }
-
-  // TODO As we are in development process we are passing only one file: './demo-tests/demo-tests' or a single
-  // file but in the next steps tester should accept a couple of files, and output method should receive this two files
-  // and the flag
-  // log(colors.information(`cli.input ${cli.input.length}`));
+  
   performanceTester.output(cli.input, cli.flags.format);
 
   process.exit();
