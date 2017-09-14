@@ -9,7 +9,7 @@ const defaultConfig = require('./config/config');
  * @param {Object} config - Configuration passed to test. If no configuration
  * is passed Test will be launch with the default configuration
  */
-function SpeedTest(test, ...config) {
+function SpeedTest(test, config) {
   this.test = test;
   const testConfig = config || defaultConfig;
   this.params = (typeof testConfig.params === 'undefined') ? defaultConfig.params : testConfig.params;

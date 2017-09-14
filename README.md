@@ -4,7 +4,7 @@
 
 # TesterJS
 
-TesterJS is a simple library which let you compare in terms of performance one or several piecces of code. 
+TesterJS is a simple node library which let you compare in terms of performance two pieces of code. 
 
 ## Getting Started
 
