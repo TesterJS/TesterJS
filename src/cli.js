@@ -30,12 +30,6 @@ if (!cli.input[0] || !cli.input[1]) {
   process.exit(1);
 }
 
-//  log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
-
-// const listOfTests = cli.input[0] ? require(path.resolve(cli.input[0])) : require('../default-tests/default-tests');
-
-// const filesToTest = [cli.input[0], cli.input[1]];
-
 log(colors.todo(
   figlet.textSync('TesterJS')
 ));
