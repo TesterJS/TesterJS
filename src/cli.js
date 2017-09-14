@@ -40,7 +40,6 @@ figlet('TesterJS', function(err, data) {
     console.dir(err);
     return;
   }
-  
   performanceTester.output(cli.input, cli.flags.format);
 
   process.exit();
