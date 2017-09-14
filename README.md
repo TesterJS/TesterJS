@@ -40,10 +40,10 @@ npm test
 $ tester --help
 
   Usage
-    $ psi <file-to-test-one> <file-to-test-two>
+    $ tester <file-to-test-one> <file-to-test-two>
 
   Options
-    --format     Output format: cli|json|tap
+    --format     Output format: cli|json
 
   Example
     $ foo foo.js bazinga.js --format=json
