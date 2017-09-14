@@ -23,7 +23,6 @@ function getReporter(format) {
  * @return {string} - Required file with the proper path
  */
 function normalizeFilePath(filePath) {
-  console.log('path: ', filePath);
   return require(path.resolve(filePath));
 }
 
@@ -42,27 +41,17 @@ function executeTester(format) {
   }
 }
 
-module.exports.output = (fileOnePath, fileTwoPath, format) => {
-  // We create a new Tester instance for every test defined in int the
-  // file passed as argument to te performance tester tool
-
-  const fileOne = normalizeFilePath(fileOnePath);
-  // console.log(`listOfFiles ${fileOne}`);
-  for ( let prop in fileOne) {
-    if (fileOne.hasOwnProperty(prop) ) {
-      // console.log(`fileOne[prop] ${fileOne[prop]}`);
-      listOfTest.push(new SpeedTest(fileOne[prop]));
+module.exports.output = (filesPath, format) => {
+  filesPath.forEach( (filePath) => {
+    log(colors.information(filePath));
+    let file = normalizeFilePath(filePath);
+    for ( let prop in file) {
+      if (file.hasOwnProperty(prop) ) {
+        // We create a new Tester instance for every test passed
+        listOfTest.push(new SpeedTest(file[prop]));
+      }
     }
-  }
-
-  const fileTwo = normalizeFilePath(fileTwoPath);
-  // console.log(`fileTwo ${fileTwo}`);
-  for ( let prop in fileTwo) {
-    if (fileTwo.hasOwnProperty(prop) ) {
-      // console.log(`fileOne[prop] ${fileTwo[prop]}`);
-      listOfTest.push(new SpeedTest(fileTwo[prop]));
-    }
-  }
+  });
 
   executeTester(format);
 };

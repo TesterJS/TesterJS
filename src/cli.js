@@ -25,10 +25,10 @@ const cli = meow(`
 updateNotifier({pkg: cli.pkg}).notify();
 
 // This code should be added when Tester is prepared to receive a couple of files
-// if (!cli.input[0] || !cli.input[1]) {
-//   console.error('Please you have to specify two files');
-//   process.exit(1);
-// }
+if (!cli.input[0] || !cli.input[1]) {
+  log(colors.error('Please you have to specify two files'));
+  process.exit(1);
+}
 
 //  log(`This is how your cli looks --> cli.input[0]: ${cli.input[0]} and cli.flags: ${JSON.stringify(cli.flags)}`);
 
@@ -50,7 +50,8 @@ figlet('TesterJS', function(err, data) {
   // TODO As we are in development process we are passing only one file: './demo-tests/demo-tests' or a single
   // file but in the next steps tester should accept a couple of files, and output method should receive this two files
   // and the flag
-  performanceTester.output(cli.input[0], cli.input[1], cli.flags.format);
+  // log(colors.information(`cli.input ${cli.input.length}`));
+  performanceTester.output(cli.input, cli.flags.format);
 
   process.exit();
 });
