@@ -1,6 +1,10 @@
+[![Build Status](https://travis-ci.org/TesterJS/TesterJS.svg?branch=feature-customized-reporter)](https://travis-ci.org/TesterJS/TesterJS)
+
+![TesterJS output](/screenshots/Tester_output.png "TesterJS output")
+
 # TesterJS
 
-TesterJS is a simple library which let you compare in terms of performance one or several piecces of code. 
+TesterJS is a simple node library which let you compare in terms of performance two pieces of code. 
 
 ## Getting Started
 
@@ -24,7 +28,26 @@ To start using TesterJS only need to follow the next steps
 
 ## Running the tests
 
-TODO: // Tests comming soon
+For running the test you only have to run test as usual:
+
+```
+npm test
+```
+
+## CLI
+
+```
+$ tester --help
+
+  Usage
+    $ tester <file-to-test-one> <file-to-test-two>
+
+  Options
+    --format     Output format: cli|json
+
+  Example
+    $ foo foo.js bazinga.js --format=json
+```
 
 ## Current Version
 
@@ -32,7 +55,7 @@ TesterJS 0.1.0
 
 ## Authors
 
-**Juan Manuel Ruiz** & **Juan Sicilia**
+**[Juan Manuel Ruiz](https://github.com/JuanMaRuiz)** & **[Juan Sicilia](https://github.com/siciliajuan)**
 
 ## License
 
