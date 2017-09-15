@@ -10,7 +10,8 @@
     "tester": "./bin/tester.js"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "./bin/tester.js",
+    "debug": "node --debug ./bin/tester.js",
     "test": "mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
     "testCov": "nyc mocha",

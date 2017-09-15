@@ -19,34 +19,34 @@ function SpeedTest(test, config) {
 /**
  * @description The SpeedTest constructor prototype that holds the SpeedTest
  * executor
+ * @return {object} - contains the result of the performance
  */
-SpeedTest.prototype = {
-  executor: function() {
-    let i = this.numOfTimes,
-      times = [],
-      totalTime,
-      maxTime,
-      minTime;
+SpeedTest.prototype.executor = function() {
+  const test = this.test;
+  let i = this.numOfTimes,
+    times = [],
+    totalTime,
+    maxTime,
+    minTime;
 
-    while (i--) {
-      const timeStart = now();
-      this.test(this.params);
-      const timeEnd = now();
-      totalTime = (timeEnd - timeStart);
-      times.push(totalTime);
-    }
+  while (i--) {
+    const timeStart = now();
+    test(this.params);
+    const timeEnd = now();
+    totalTime = (timeEnd - timeStart);
+    times.push(totalTime);
+  }
 
-    maxTime = Math.max.apply(null, times);
-    minTime = Math.min.apply(null, times);
+  maxTime = Math.max.apply(null, times);
+  minTime = Math.min.apply(null, times);
 
-    return {
-      testTitle: this.test.name,
-      numberOfExecutions: this.numOfTimes,
-      average: calcAvg.call(this, times),
-      maxTime,
-      minTime,
-    };
-  },
+  return {
+    testTitle: this.test.name,
+    numberOfExecutions: this.numOfTimes,
+    average: calcAvg.call(this, times),
+    maxTime,
+    minTime,
+  };
 };
 
 /**

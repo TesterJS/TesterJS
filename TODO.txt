@@ -1,11 +1,5 @@
 TODO LIST:
 
-* Output should show the best and worst time of all the executions
-* Write in ES6
-* Add help
-* Different ouput formats:
-  - Table
-  - Styled params and returned values
 * Add Unit Tests
     - Function return what is expected and sets correctly its specific configuration
     - Function return what is expected and sets the default configuration
