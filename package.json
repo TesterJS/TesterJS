@@ -12,11 +12,11 @@
   "scripts": {
     "start": "./bin/tester.js",
     "debug": "node --debug ./bin/tester.js",
-    "test": "mocha",
+    "test": "npm run lint && mocha",
     "coverageReport": "nyc --reporter=lcov mocha",
     "testCov": "nyc mocha",
-    "eslint": "node_modules/eslint/bin/eslint.js src/**",
-    "lintFix": "node_modules/eslint/bin/eslint.js src/** --fix"
+    "lint": "eslint src/**",
+    "lintFix": "eslint src/** --fix"
   },
   "repository": {
     "type": "git",

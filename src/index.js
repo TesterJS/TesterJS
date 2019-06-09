@@ -4,7 +4,7 @@ const SpeedTest = require('./tester');
 const colors = require('./config/colors');
 const log = console.log;
 
-let listOfTest = [];
+const listOfTest = [];
 
 /**
  * Get the formatter required for the used
@@ -44,8 +44,8 @@ function executeTester(format) {
 module.exports.output = (filesPath, format) => {
   filesPath.forEach( (filePath) => {
     log(colors.information(filePath));
-    let file = normalizeFilePath(filePath);
-    for ( let prop in file) {
+    const file = normalizeFilePath(filePath);
+    for ( const prop in file) {
       if (file.hasOwnProperty(prop) ) {
         // We create a new Tester instance for every test passed
         listOfTest.push(new SpeedTest(file[prop]));
