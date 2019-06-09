@@ -17,10 +17,10 @@ const cli = meow(`
   Examples
     $ foo foo.js bazinga.js --format=json
   `, {
-    alias: {
-      f: 'format',
-    },
-  });
+  alias: {
+    f: 'format',
+  },
+});
 
 updateNotifier({pkg: cli.pkg}).notify();
 
