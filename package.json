@@ -13,7 +13,8 @@
     "start": "./bin/tester.js",
     "debug": "node --debug ./bin/tester.js",
     "test": "npm run lint && mocha",
-    "coverageReport": "nyc --reporter=lcov mocha",
+    "coverageReport": "nyc --reporter=lcov npm run test",
+    "report": "nyc report --reporter=html",
     "testCov": "nyc mocha",
     "lint": "eslint src/**",
     "lintFix": "eslint src/** --fix"
