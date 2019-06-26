@@ -38,7 +38,7 @@ SpeedTest.prototype.executor = function() {
   return {
     testTitle: this.test.name,
     numberOfExecutions: this.numOfTimes,
-    average: calcAvg.call(this, times),
+    average: calculateAverage(times),
     maxTime: Math.max.apply(null, times),
     minTime: Math.min.apply(null, times),
   };
@@ -49,15 +49,6 @@ SpeedTest.prototype.executor = function() {
  * @param  {Array} times Array of times for every execution
  * @return {Number}
  */
-function calcAvg(times) {
-  let sum = 0,
-    i = 0;
-  const max = times.length;
-  for ( ; i < max; i += 1 ) {
-    sum += times[i];
-  }
-
-  return (sum / max);
-}
+const calculateAverage = (times) => times.reduce((acc, current) => acc + current) / times.length;
 
 module.exports = SpeedTest;
